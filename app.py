@@ -22,7 +22,7 @@ def cargar_datos_completos():
     })
     
     LOGIN_URL = "https://api.stellar.newsunroad.com/api/v0/login"
-    PAYLOAD = {"username": "armando.acuna@hybricoenergy.com", "password": "Hybrico2021"}
+    PAYLOAD = {"username": "armao-acua@hybricoenergy.com", "password": "Hyoco"}
     
     try:
         session.post(LOGIN_URL, json=PAYLOAD, timeout=10)
