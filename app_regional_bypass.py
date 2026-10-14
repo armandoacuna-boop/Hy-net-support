@@ -16,7 +16,7 @@ def obtener_multiplicador(data_dict, parametro):
     except:
         return 1
 
-# NUEVA FUNCIÓN: Extrae la suma de los datos Y el tiempo de la última actualización
+# Extrae la suma de los datos Y el tiempo de la última actualización
 def extraer_datos_y_tiempo(data_dict, clave_buscada):
     items = data_dict.get('data', [])
     suma_total = 0.0
@@ -133,7 +133,12 @@ session.headers.update({
 })
 
 LOGIN_URL = "https://api.stellar.newsunroad.com/api/v0/login"
-PAYLOAD = {"username": "armando.acuna@hybricoenergy.com", "password": "Hybrico2021"}
+
+# Se conecta nativamente a la bóveda segura de Streamlit Cloud
+PAYLOAD = {
+    "username": st.secrets["API_USERNAME"], 
+    "password": st.secrets["API_PASSWORD"]
+}
 
 if "sitios_base" not in st.session_state:
     st.session_state.sitios_base = []
